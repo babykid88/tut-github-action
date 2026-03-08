@@ -1,0 +1,4 @@
+name = "cf-worker-ci-cd-demo"
+main = "src/worker.ts"
+compatibility_date = "2026-03-08"
+

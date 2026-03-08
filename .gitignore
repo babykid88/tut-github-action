@@ -1,0 +1,14 @@
+# dependencies
+node_modules/
+# build artifacts
+dist/
+build/
+# local env / secrets
+.env
+.env.*
+# cloudflare / wrangler local files
+.wrangler/
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/
