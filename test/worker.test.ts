@@ -19,10 +19,12 @@ describe("worker routes", () => {
     await expect(readJson(res)).resolves.toEqual({ message: "Hello, Ada!" });
   });
 
-  it("unknown route returns 404", async () => {
+  it("unknown route returns 404 with a hint message", async () => {
     const res = handleRequest(new Request("https://example.com/nope", { method: "GET" }));
     expect(res.status).toBe(404);
-    await expect(readJson(res)).resolves.toEqual({ error: "Not Found" });
+    await expect(readJson(res)).resolves.toEqual({
+      message: "Welcome! Use /health for a health check and /hello?name=YourName for a greeting."
+    });
   });
 
   it("non-GET returns 405", async () => {

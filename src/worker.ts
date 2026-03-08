@@ -20,7 +20,12 @@ export function handleRequest(request: Request): Response {
     return json({ message: `Hello, ${name}!` });
   }
 
-  return json({ error: "Not Found" }, { status: 404 });
+  return json(
+    {
+      message: "Welcome! Use /health for a health check and /hello?name=YourName for a greeting."
+    },
+    { status: 404 }
+  );
 }
 
 export default {

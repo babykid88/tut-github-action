@@ -7,6 +7,7 @@ This is a tiny Cloudflare Worker API + GitHub Actions pipeline:
 
 ## Endpoints
 
+- `GET /` → `{ "message": "Welcome! Use /health for a health check and /hello?name=YourName for a greeting." }` (default hint)
 - `GET /health` → `{ "ok": true }`
 - `GET /hello?name=Ada` → `{ "message": "Hello, Ada!" }`
 
